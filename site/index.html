@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2026100403">
+<link rel="stylesheet" href="styles.css?v=2026100404">
 </head>
 <body>
 
@@ -96,7 +96,8 @@
     <ul>
       <li>Commissioned new sealer and paint robot cells at customer plants, from install through production handoff.</li>
       <li>Programmed Flex Vision and pick-and-place applications. IRC5/IRC5P controllers and IPS paint systems.</li>
-      <li>Delivered cycle time improvements and onsite troubleshooting and repair. Employee of the Month.</li>
+      <li>Programmed a 16-robot masking plug cell for BMW on IRB robots and vision learned on the job: on-time launch, 60-second cycle, 95% plug success (<a href="#masking-plug">see the project</a>). Employee of the Month.</li>
+      <li>Delivered cycle time improvements and onsite troubleshooting and repair.</li>
     </ul>
     <div class="photos">
       <figure><img src="img/paint-booth.jpg" alt="Paint booth with covered robots during a spray trial" loading="lazy"><figcaption>Paint booth trial run</figcaption></figure>
@@ -162,6 +163,27 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="wrap section" id="masking-plug">
+  <h2>Project spotlight: BMW masking plug cell</h2>
+  <p class="lede narrow">In 2018 ABB moved me, a paint specialist, onto a 16-robot cell that installs masking plugs into BMW car bodies, on robot and vision platforms I had never programmed. It launched on schedule.</p>
+  <div class="spot-stats">
+    <div><span class="num">16</span><span class="lbl">robots in the cell</span></div>
+    <div><span class="num">60s</span><span class="lbl">cycle time</span></div>
+    <div><span class="num">95%</span><span class="lbl">plug success rate</span></div>
+    <div><span class="num">On time</span><span class="lbl">hit the launch date</span></div>
+  </div>
+  <div class="spot-grid">
+    <div class="spot"><h4>The problem</h4><p>Plugs only seat within tight tolerances, and the car body could shift slightly during the install. A straight-line insert would miss or seat badly.</p></div>
+    <div class="spot"><h4>What I did</h4><p>Learned IRB robots and vision on the job from ABB documentation, on-site trials, and BMW&#39;s own people. Programmed paired robots on opposite sides of the body to push at the same instant, so the opposing forces held the body still. Then I studied how line workers installed plugs by hand and built their technique into the robot paths with RelTool offsets.</p></div>
+    <div class="spot"><h4>The result</h4><p>Launched on the date, at a 60-second cycle and 95% plug success. The remaining misses traced back to plugs jamming on the feed conveyor, not to insertion. Named ABB Field Service Employee of the Month.</p></div>
+  </div>
+  <blockquote class="quote">
+    <p>&ldquo;Mark has performed above expectations and has excelled throughout. Mark has been instrumental in the success of the Masking Plug project.&rdquo;</p>
+    <cite>Director of Field Services &amp; Technical Support, ABB. Employee of the Month award, June 2018</cite>
+  </blockquote>
+  <p class="narrow lesson"><strong>What I&#39;d do sooner:</strong> start on the plug deck with the line workers on day one. Their hand technique was the key to the robot programs.</p>
 </section>
 
 <section class="wrap section" id="skills">

@@ -81,9 +81,9 @@ const children = [
 
   job('Field Service Engineer', 'ABB', 'Nov 2017 – Dec 2020'),
   bullet('Commissioned new robot cells for sealer and paint applications at customer plants, from install through production handoff.'),
+  bullet('Programmed a 16-robot masking plug cell for BMW on IRB robots and vision learned on the job: launched on schedule at a 60-second cycle and 95% plug success; named ABB Field Service Employee of the Month (June 2018).'),
   bullet('Programmed Flex Vision guidance and pick-and-place applications; integrated IRC5/IRC5P controllers and IPS paint systems.'),
   bullet('Delivered cycle time improvements, robot brake repairs, and onsite troubleshooting using RobotStudio, RobView, and Shop Floor Editor.'),
-  bullet('Recognized as ABB Employee of the Month.'),
 
   job('Robot Programmer', 'BMW Manufacturing, Greer, SC', 'Aug 2011 – Nov 2017'),
   bullet('Created paint programs for new models; ran paint trial bodies and fine-pointed robot paths.'),
