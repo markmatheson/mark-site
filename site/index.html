@@ -65,9 +65,10 @@
       <li>Key contributor to holding <strong>60-second station cycle times</strong> through path optimization and process re-sequencing (<a href="#cycle-time">see how</a>).</li>
       <li>Offline programming in RobotStudio, Process Simulate, and Dürr 3D Onsite. Design and 3D print custom robot tooling.</li>
     </ul>
-    <div class="photos">
+    <div class="photos three">
       <figure><img src="img/conveyor-sensors.jpg" alt="Conveyor station with photoelectric sensors and vision hardware" loading="lazy"><figcaption>Sensor and vision station work</figcaption></figure>
       <figure><img src="img/truprint.jpg" alt="TruPrint 3000 metal additive manufacturing machine" loading="lazy"><figcaption>Additive manufacturing equipment</figcaption></figure>
+      <figure class="clip"><video src="img/pvc-flat-tip.mp4" poster="img/pvc-flat-tip-poster.jpg" muted loop playsinline preload="metadata" aria-label="PVC sealer spraying from an Omni flat-tip nozzle during a pressure test"></video><figcaption>Pressure-testing PVC with an Omni flat tip</figcaption></figure>
     </div>
   </article>
 
@@ -244,6 +245,12 @@
   new IntersectionObserver((entries, io) => {
     if (entries[0].isIntersecting) { play(); io.disconnect(); }
   }, { threshold: 0.6 }).observe(d);
+})();
+(() => {
+  const v = document.querySelector(".clip video");
+  if (!v) return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) { v.controls = true; return; }
+  new IntersectionObserver(([e]) => { e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }, { threshold: 0.4 }).observe(v);
 })();
 </script>
 </body>
