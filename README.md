@@ -22,3 +22,12 @@ re-saved first (resize + strip EXIF/GPS) — phone photos carry location data.
 
 Cloudflare Pages, connected to this GitHub repo. Framework preset: None.
 Build command: empty. Build output directory: `site`. Every push to `main` redeploys.
+
+## Regenerate the Word resume
+
+`resume/resume-docx.js` builds the .docx with the `docx` npm package (keep its
+text in sync with `resume.html` by hand):
+
+```bash
+cd resume && npm install docx && node resume-docx.js "C:/Users/palme/Desktop/Mark_Matheson_resume_Amazon_PrimeAir.docx"
+```
