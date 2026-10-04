@@ -31,3 +31,11 @@ text in sync with `resume.html` by hand):
 ```bash
 cd resume && npm install docx && node resume-docx.js "C:/Users/palme/Desktop/Mark_Matheson_resume_Amazon_PrimeAir.docx"
 ```
+
+## Cache busting — bump this when styles.css changes
+
+Cloudflare tells browsers to keep `styles.css` for 4 hours, but `index.html` is
+always fetched fresh. So after any CSS change, bump the `?v=` number on the
+stylesheet link in `index.html` (format `YYYYMMDDNN`). Skipping it means
+returning visitors get the new HTML with the old CSS, and layouts break
+(10-04-2026: a 960px-wide video and a dead Replay button).
