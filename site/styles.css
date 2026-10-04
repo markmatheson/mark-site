@@ -168,3 +168,17 @@ figcaption { font-size: .82rem; color: var(--muted); margin-top: .4rem; }
   .photos { grid-template-columns: 1fr; }
   .num { font-size: 2rem; }
 }
+
+/* Cycle-time race animation (armed by JS; static diagram if JS off or reduced motion) */
+.diagram .bar rect { transform-box: fill-box; transform-origin: left center; }
+.diagram.armed .bar rect { transform: scaleX(0); }
+.diagram.armed .bar text, .diagram.armed .fin { opacity: 0; }
+.diagram.play .bar rect { transform: scaleX(1); transition: transform var(--d) linear var(--s); }
+.diagram.play .bar text { opacity: 1; transition: opacity .3s ease calc(var(--s) + var(--d) * .3); }
+.diagram.play .fin { opacity: 1; transition: opacity .6s ease var(--end); }
+.d-head { stroke: var(--accent-fill); stroke-width: 2; opacity: 0; }
+.diagram.play:not(.done) .d-head { opacity: .9; }
+.diagram-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 12px; }
+.diagram-foot .caption { margin: 0; }
+.replay { font: 600 .85rem Inter, sans-serif; color: var(--accent); background: transparent; border: 1.5px solid var(--line); border-radius: 8px; padding: 6px 14px; cursor: pointer; }
+.replay:hover { border-color: var(--accent); }

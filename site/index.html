@@ -131,28 +131,34 @@
     <p class="lede narrow">Most cycle time isn't lost in the motion. It's lost in waiting. A robot finishes one task, then the system starts the next. When a step doesn't actually depend on the one before it, it doesn't have to wait.</p>
     <p class="narrow">One example: the vision system doesn't need the robot sitting at its ready position to measure the car. So instead of tool change → move to ready → fire vision → calculate corrections, vision fires and the corrections are calculated <em>while the robot is still finishing its tool change</em>. The robot arrives with its offsets already waiting.</p>
 
-    <div class="diagram" role="img" aria-label="Diagram: sequential steps compared with the same steps overlapped, showing seconds saved">
-      <svg viewBox="0 0 720 240"xmlns="http://www.w3.org/2000/svg">
+    <div class="diagram" role="img" aria-label="Animated diagram: the same steps run one at a time versus overlapped. The overlapped version reaches paint sooner, saving time every cycle.">
+      <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg">
         <text class="d-label" x="0" y="22">Before: one step at a time</text>
-        <rect class="d-a" x="0" y="34" width="250" height="34" rx="4"/><text class="d-t" x="12" y="56">Tool change</text>
-        <rect class="d-b" x="254" y="34" width="90" height="34" rx="4"/><text class="d-t" x="264" y="56">To ready</text>
-        <rect class="d-c" x="348" y="34" width="130" height="34" rx="4"/><text class="d-t" x="360" y="56">Vision</text>
-        <rect class="d-c" x="482" y="34" width="110" height="34" rx="4"/><text class="d-t" x="494" y="56">Corrections</text>
-        <rect class="d-p" x="596" y="34" width="124" height="34" rx="4"/><text class="d-t inv" x="608" y="56">Paint →</text>
+        <g class="bar" data-x="0" data-w="250"><rect class="d-a" x="0" y="34" width="250" height="34" rx="4"/><text class="d-t" x="12" y="56">Tool change</text></g>
+        <g class="bar" data-x="254" data-w="90"><rect class="d-b" x="254" y="34" width="90" height="34" rx="4"/><text class="d-t" x="264" y="56">To ready</text></g>
+        <g class="bar" data-x="348" data-w="130"><rect class="d-c" x="348" y="34" width="130" height="34" rx="4"/><text class="d-t" x="360" y="56">Vision</text></g>
+        <g class="bar" data-x="482" data-w="110"><rect class="d-c" x="482" y="34" width="110" height="34" rx="4"/><text class="d-t" x="494" y="56">Corrections</text></g>
+        <g class="bar" data-x="596" data-w="124"><rect class="d-p" x="596" y="34" width="124" height="34" rx="4"/><text class="d-t inv" x="608" y="56">Paint →</text></g>
 
         <text class="d-label" x="0" y="112">After: independent steps overlap</text>
-        <rect class="d-a" x="0" y="124" width="250" height="34" rx="4"/><text class="d-t" x="12" y="146">Tool change</text>
-        <rect class="d-c" x="0" y="162" width="130" height="30" rx="4"/><text class="d-t" x="12" y="182">Vision</text>
-        <rect class="d-c" x="134" y="162" width="110" height="30" rx="4"/><text class="d-t" x="146" y="182">Corrections</text>
-        <rect class="d-b" x="254" y="124" width="90" height="34" rx="4"/><text class="d-t" x="264" y="146">To ready</text>
-        <rect class="d-p" x="348" y="124" width="124" height="34" rx="4"/><text class="d-t inv" x="360" y="146">Paint →</text>
+        <g class="bar" data-x="0" data-w="250"><rect class="d-a" x="0" y="124" width="250" height="34" rx="4"/><text class="d-t" x="12" y="146">Tool change</text></g>
+        <g class="bar" data-x="0" data-w="130"><rect class="d-c" x="0" y="162" width="130" height="30" rx="4"/><text class="d-t" x="12" y="180">Vision</text></g>
+        <g class="bar" data-x="134" data-w="110"><rect class="d-c" x="134" y="162" width="110" height="30" rx="4"/><text class="d-t" x="146" y="180">Corrections</text></g>
+        <g class="bar" data-x="254" data-w="90"><rect class="d-b" x="254" y="124" width="90" height="34" rx="4"/><text class="d-t" x="264" y="146">To ready</text></g>
+        <g class="bar" data-x="348" data-w="124"><rect class="d-p" x="348" y="124" width="124" height="34" rx="4"/><text class="d-t inv" x="360" y="146">Paint →</text></g>
 
-        <line class="d-guide" x1="348" y1="70" x2="348" y2="232"/>
-        <line class="d-guide" x1="596" y1="70" x2="596" y2="232"/>
-        <line class="d-save" x1="352" y1="226" x2="592" y2="226"/>
-        <text class="d-save-t" x="472" y="216" text-anchor="middle">time saved, every cycle</text>
+        <g class="fin">
+          <line class="d-guide" x1="348" y1="70" x2="348" y2="232"/>
+          <line class="d-guide" x1="596" y1="70" x2="596" y2="232"/>
+          <line class="d-save" x1="352" y1="226" x2="592" y2="226"/>
+          <text class="d-save-t" x="472" y="216" text-anchor="middle">time saved, every cycle</text>
+        </g>
+        <line class="d-head" x1="0" y1="28" x2="0" y2="198"/>
       </svg>
-      <p class="caption">Illustrative, not to scale. Saving a few seconds per cycle compounds into hours of production.</p>
+      <div class="diagram-foot">
+        <p class="caption">Illustrative, not to scale. Saving a few seconds per cycle compounds into hours of production.</p>
+        <button class="replay" type="button" hidden>&#9654; Replay</button>
+      </div>
     </div>
   </div>
 </section>
@@ -211,5 +217,34 @@
 
 <footer class="wrap footer">© 2026 Mark Matheson</footer>
 
+<script>
+(() => {
+  // Race the two timelines: bar width = duration, so both rows run on one clock.
+  const d = document.querySelector(".diagram");
+  if (!d || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const MS_PER_UNIT = 5, TOTAL = 720 * MS_PER_UNIT;
+  d.querySelectorAll(".bar").forEach(g => {
+    g.style.setProperty("--s", g.dataset.x * MS_PER_UNIT + "ms");
+    g.style.setProperty("--d", g.dataset.w * MS_PER_UNIT + "ms");
+  });
+  d.style.setProperty("--end", TOTAL + "ms");
+  d.classList.add("armed");
+  const head = d.querySelector(".d-head"), btn = d.querySelector(".replay");
+  const play = () => {
+    d.classList.remove("play"); void d.offsetWidth; d.classList.add("play");
+    const t0 = performance.now();
+    const tick = now => {
+      const x = Math.min(720, (now - t0) / MS_PER_UNIT);
+      head.setAttribute("x1", x); head.setAttribute("x2", x);
+      if (x < 720) requestAnimationFrame(tick); else d.classList.add("done");
+    };
+    d.classList.remove("done"); requestAnimationFrame(tick);
+  };
+  btn.hidden = false; btn.addEventListener("click", play);
+  new IntersectionObserver((entries, io) => {
+    if (entries[0].isIntersecting) { play(); io.disconnect(); }
+  }, { threshold: 0.6 }).observe(d);
+})();
+</script>
 </body>
 </html>
