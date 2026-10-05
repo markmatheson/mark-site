@@ -44,7 +44,7 @@ const children = [
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40 },
     children: [new TextRun({ text: 'MARK A. MATHESON', bold: true, font: FONT, size: 36, color: ACCENT })] }),
   new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 40 },
-    children: runs('Inman, SC (relocating to Tampa Bay, FL)  |  (864) 386-1518  |  mark@markmatheson.dev  |  markmatheson.dev') }),
+    children: runs('Inman, SC  |  (864) 386-1518  |  mark@markmatheson.dev  |  markmatheson.dev') }),
 
   section('Summary'),
   new Paragraph({ spacing: { after: 40 }, children: runs(
