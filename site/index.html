@@ -22,7 +22,7 @@
     <div class="hero-text">
       <h1>Mark Matheson</h1>
       <p class="title">Robotics &amp; Automation Field Service Engineer</p>
-      <p class="lede">I keep complex automation systems running and optimized. 15+ years on the front line between the people operating equipment and the engineers who designed it.</p>
+      <p class="lede">I've spent 15+ years keeping robots running and production moving. I started out on the paint line floor and worked my way up from there.</p>
       <div class="actions">
         <a class="btn primary" href="Mark_Matheson_Resume.pdf" download>Download Resume</a>
         <a class="btn" href="mailto:mark@markmatheson.dev">Email Me</a>
@@ -45,7 +45,7 @@
 
 <figure class="banner">
   <img src="img/abb-robot-cell.jpg" alt="ABB paint robots positioned around a test fixture in a paint booth" loading="lazy">
-  <figcaption>Commissioning ABB paint robots on a test fixture.</figcaption>
+  <figcaption>ABB paint robots on a test fixture during commissioning</figcaption>
 </figure>
 
 <main>
@@ -59,10 +59,10 @@
       <p class="dates">Feb 2023 – Present</p>
     </div>
     <ul>
-      <li>Lead technical development of paint shop automation across ABB, Dürr, and Fanuc robots: new model programming, design changes, and continuous improvement.</li>
-      <li>First responder for planned and unplanned downtime, helping sustain <strong>95% equipment availability</strong>.</li>
-      <li>Key contributor to holding <strong>60-second station cycle times</strong> through path optimization and process re-sequencing (<a href="#cycle-time">see how</a>).</li>
-      <li>Offline programming in RobotStudio, Process Simulate, and Dürr 3D Onsite. Design and 3D print custom robot tooling.</li>
+      <li>Lead programmer in the paint shop on ABB, Dürr, and Fanuc robots. I handle new model programming, design changes, and day-to-day improvements.</li>
+      <li>When a robot goes down, I'm usually one of the people getting it back up. We hold <strong>95% equipment availability</strong>.</li>
+      <li>Helped hold <strong>60-second station cycle times</strong> by tightening up paths and changing the order of steps (<a href="#cycle-time">see how</a>).</li>
+      <li>Offline programming in RobotStudio, Process Simulate, and Dürr 3D Onsite. I also design and 3D print custom robot tooling.</li>
     </ul>
     <div class="photos three">
       <figure><img src="img/conveyor-sensors.jpg" alt="Conveyor station with photoelectric sensors and vision hardware" loading="lazy"><figcaption>Sensor and vision station work</figcaption></figure>
@@ -77,9 +77,9 @@
       <p class="dates">Jan 2021 – Feb 2023</p>
     </div>
     <ul>
-      <li>Owned a <strong>32-account territory</strong> across South Carolina, western North Carolina, and east Tennessee, working independently.</li>
-      <li>Installed, repaired, and upgraded Puritan Bennett 980/840 ventilators at hospital sites, where uptime is a patient-safety issue.</li>
-      <li>Executed engineering field changes and trained customer biomedical staff onsite.</li>
+      <li>Covered a <strong>32-account territory</strong> across South Carolina, western North Carolina, and east Tennessee, mostly on my own.</li>
+      <li>Installed, repaired, and upgraded Puritan Bennett 980 and 840 ventilators in hospitals, including through COVID. There was no room for mistakes.</li>
+      <li>Did engineering field changes and trained hospital biomed staff on site.</li>
     </ul>
     <div class="photos">
       <figure><img src="img/pb980-shop.jpg" alt="Puritan Bennett 980 ventilators in a service shop" loading="lazy"><figcaption>PB980 ventilators in for service</figcaption></figure>
@@ -93,10 +93,10 @@
       <p class="dates">Nov 2017 – Dec 2020</p>
     </div>
     <ul>
-      <li>Commissioned new sealer and paint robot cells at customer plants, from install through production handoff.</li>
+      <li>Traveled to customer plants to commission new sealer and paint robot cells, from install until production took them over. That included BMW and a bumper paint line at Honda.</li>
       <li>Programmed Flex Vision and pick-and-place applications. IRC5/IRC5P controllers and IPS paint systems.</li>
-      <li>Programmed a 16-robot masking plug cell for BMW on IRB robots and vision learned on the job: on-time launch, 60-second cycle, 95% plug success (<a href="#masking-plug">see the project</a>). Employee of the Month.</li>
-      <li>Delivered cycle time improvements and onsite troubleshooting and repair.</li>
+      <li>Programmed a 16-robot masking plug cell for BMW on robots and vision I'd never used before. It launched on time at a 60-second cycle and 95% plug success (<a href="#masking-plug">see the project</a>). I was named Employee of the Month for it.</li>
+      <li>Cycle time improvements, troubleshooting, and repairs on site.</li>
     </ul>
     <div class="photos">
       <figure><img src="img/paint-booth.jpg" alt="Paint booth with covered robots during a spray trial" loading="lazy"><figcaption>Paint booth trial run</figcaption></figure>
@@ -113,7 +113,7 @@
       <li>Created paint programs for new models and ran paint trial bodies.</li>
       <li>Troubleshot and corrected paint defects. Set up color tables for Bell RB1000 applicators.</li>
       <li>Member of the commissioning team for the IPP and Wax lines.</li>
-      <li>Came up from the paint line floor: repair, E-coat sand, inspection &amp; polish, robot operator.</li>
+      <li>Before programming I worked the paint line floor: repair, E-coat sanding, inspection and polish, and robot operator.</li>
     </ul>
   </article>
 
@@ -122,15 +122,15 @@
       <div><h3>Diesel Technician</h3><p class="org">Morgan Corporation</p></div>
       <p class="dates">Sep 2010 – Jul 2011</p>
     </div>
-    <p>Where it started: overhauls and offsite repairs, keeping equipment downtime to a minimum.</p>
+    <p>Where I got my start, doing overhauls and off-site repairs and keeping downtime low.</p>
   </article>
 </section>
 
 <section class="section alt" id="cycle-time">
   <div class="wrap">
     <h2>How I cut cycle time</h2>
-    <p class="lede narrow">Most cycle time isn't lost in the motion. It's lost in waiting. A robot finishes one task, then the system starts the next. When a step doesn't actually depend on the one before it, it doesn't have to wait.</p>
-    <p class="narrow">One example, on a sealer robot: the vision system doesn't need the robot sitting at its ready position to measure the car. So instead of tool change → move to ready → fire vision → calculate corrections, vision fires and the corrections are calculated <em>while the robot is still finishing its tool change</em>. The robot arrives with its offsets already waiting.</p>
+    <p class="lede narrow">A lot of cycle time gets wasted waiting. The robot finishes one thing, and only then does the next thing start. If a step doesn't really need the one before it to finish, it can start early.</p>
+    <p class="narrow">Here's one I did on a sealer robot. The program did a tool change, moved to ready, fired the vision system, then calculated the corrections. But vision doesn't need the robot at ready to measure the car. So I moved it up, and now vision fires and the corrections get calculated <em>while the robot is still doing its tool change</em>. By the time it gets to ready, the offsets are already there.</p>
 
     <div class="diagram" role="img" aria-label="Animated diagram: the same steps run one at a time versus overlapped. The overlapped version starts sealing sooner, saving time every cycle.">
       <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +166,7 @@
 
 <section class="wrap section" id="masking-plug">
   <h2>Project spotlight: BMW masking plug cell</h2>
-  <p class="lede narrow">In 2018 ABB moved me, a paint specialist, onto a 16-robot cell that installs masking plugs into BMW car bodies, on robot and vision platforms I had never programmed. It launched on schedule.</p>
+  <p class="lede narrow">In 2018 ABB put me on a 16-robot cell at BMW that puts masking plugs into the car bodies. I was a paint guy, and I'd never programmed these robots or this vision system. We launched on time anyway.</p>
   <div class="spot-stats">
     <div><span class="num">16</span><span class="lbl">robots in the cell</span></div>
     <div><span class="num">60s</span><span class="lbl">cycle time</span></div>
@@ -174,34 +174,34 @@
     <div><span class="num">On time</span><span class="lbl">hit the launch date</span></div>
   </div>
   <div class="spot-grid">
-    <div class="spot"><h4>The problem</h4><p>Plugs only seat within tight tolerances, and the car body could shift slightly during the install. A straight-line insert would miss or seat badly.</p></div>
-    <div class="spot"><h4>What I did</h4><p>Learned IRB robots and vision on the job from ABB documentation, on-site trials, and BMW&#39;s own people. Programmed paired robots on opposite sides of the body to push at the same instant, so the opposing forces held the body still. Then I studied how line workers installed plugs by hand and built their technique into the robot paths with RelTool offsets.</p></div>
-    <div class="spot"><h4>The result</h4><p>Launched on the date, at a 60-second cycle and 95% plug success. The remaining misses traced back to plugs jamming on the feed conveyor, not to insertion. Named ABB Field Service Employee of the Month.</p></div>
+    <div class="spot"><h4>The problem</h4><p>The plugs only seat if you're right on the hole, and the body could shift a little while the robots pushed on it. Just driving the plug straight in would miss or seat it badly.</p></div>
+    <div class="spot"><h4>What I did</h4><p>I learned it on site from ABB's manuals, a lot of trial and error, and BMW's people. I set up robots on opposite sides of the body to push at the same time, so they held the body still. Then I watched how the line workers put plugs in by hand and copied their motion into the robot paths with RelTool offsets.</p></div>
+    <div class="spot"><h4>The result</h4><p>It launched on the date at a 60-second cycle and 95% plug success. Most of the misses came from plugs jamming on the feed conveyor, not the robots putting them in. ABB named me Field Service Employee of the Month.</p></div>
   </div>
   <blockquote class="quote">
     <p>&ldquo;Mark has performed above expectations and has excelled throughout. Mark has been instrumental in the success of the Masking Plug project.&rdquo;</p>
     <cite>Director of Field Services &amp; Technical Support, ABB. Employee of the Month award, June 2018</cite>
   </blockquote>
-  <p class="narrow lesson"><strong>What I&#39;d do sooner:</strong> start on the plug deck with the line workers on day one. Their hand technique was the key to the robot programs.</p>
-  <p class="narrow lesson"><strong>In BMW&#39;s words:</strong> BMW Manufacturing featured the cell on LinkedIn in November 2018. The robots install about 61,000 plugs a day and took that strain off workers&#39; shoulders, necks, and hands. <a href="https://www.linkedin.com/feed/update/urn:li:activity:6467834112106389504/" target="_blank" rel="noopener">See BMW&#39;s post →</a> BMW still describes the cell on its <a href="https://www.bmwgroup-werke.com/spartanburg/en/our-plant.html" target="_blank" rel="noopener">Spartanburg plant page</a>.</p>
+  <p class="narrow lesson">If I did it again, I'd go stand with the line workers on day one. The way they did it by hand ended up being the key to the whole thing.</p>
+  <p class="narrow lesson">BMW posted about the cell on LinkedIn in November 2018. The robots put in about 61,000 plugs a day, work that used to be hard on people's shoulders, necks, and hands. <a href="https://www.linkedin.com/feed/update/urn:li:activity:6467834112106389504/" target="_blank" rel="noopener">Here's BMW's post</a>, and it's still on their <a href="https://www.bmwgroup-werke.com/spartanburg/en/our-plant.html" target="_blank" rel="noopener">Spartanburg plant page</a>.</p>
 </section>
 
 <section class="section alt" id="case-comms">
   <div class="wrap">
-    <h2>Case study: the comms drops nobody could pin down</h2>
-    <p class="lede narrow">A sealer robot kept dropping communication between its IRC5 controller and its process board. It had been going on for about a month and getting worse, and the plan was to replace the board.</p>
+    <h2>Case study: a month of comms drops</h2>
+    <p class="lede narrow">We had a sealer robot that kept losing comms between the IRC5 and the process board. It had been going on for about a month and getting worse.</p>
     <div class="spot-grid">
-      <div class="spot"><h4>The problem</h4><p>The whole maintenance team had been working it, and they were ready to call ABB in. Their plan was a new process board, but nobody knew how to move the configuration over to a new one. They called me in on my day off.</p></div>
-      <div class="spot"><h4>What I did</h4><p>Before swapping anything, I proved where the problem was. The HMI never lost its data, so it was on the controller&#39;s network side. I watched the drops in RobotStudio and checked the board&#39;s link status and boot log: the board was healthy. At the next drop I power-cycled only the internal LAN switch, and comms came right back.</p></div>
-      <div class="spot"><h4>The proof</h4><p>Maintenance wanted proof before closing it out, which was fair. I put the bad switch in our offline cell&#39;s controls cabinet, which ties three robots to a PLC. Within a day it dropped all PLC-to-robot comms there too. A month-long problem was fixed with a cheap switch: no board swap, no ABB service call.</p></div>
+      <div class="spot"><h4>The problem</h4><p>Maintenance had been on it for weeks and was about ready to call ABB in. Their plan was to replace the board, but nobody knew how to move the config over to a new one, so they called me in on my day off.</p></div>
+      <div class="spot"><h4>What I did</h4><p>I wanted to know where the problem was before I swapped anything. The HMI never lost its data, so I knew it was on the controller's network side. I watched the drops in RobotStudio and checked the board's link status and boot log, and the board looked fine. The next time it dropped, I power-cycled just the internal LAN switch and comms came right back.</p></div>
+      <div class="spot"><h4>The proof</h4><p>Maintenance wanted proof before they closed it out, which was fair. I put the bad switch in the controls cabinet on our offline cell, where three robots talk to a PLC. Within a day it dropped all the comms there too. So we swapped a cheap switch instead of the board, and never had to call ABB.</p></div>
     </div>
-    <p class="narrow lesson"><strong>Takeaway:</strong> intermittent problems will fool you. Prove where it is before you start throwing parts at it.</p>
+    <p class="narrow lesson">Intermittent problems will fool you. I try to prove where it is before I start throwing parts at it.</p>
   </div>
 </section>
 
 <section class="wrap section" id="case-backups">
   <h2>Case study: automating robot backups</h2>
-  <p class="lede narrow">Backing up around 40 ABB robots was a manual Sunday job. I automated it end to end.</p>
+  <p class="lede narrow">Every Sunday, two of our programmers spent about an hour each backing up around 40 ABB robots by hand. So I automated it.</p>
   <div class="spot-stats">
     <div><span class="num">~40</span><span class="lbl">robots covered</span></div>
     <div><span class="num">0</span><span class="lbl">people needed on Sundays</span></div>
@@ -209,9 +209,9 @@
     <div><span class="num">3</span><span class="lbl">restore points kept on each robot</span></div>
   </div>
   <div class="spot-grid">
-    <div class="spot"><h4>The problem</h4><p>Every Sunday, two programmers spent about an hour each backing up every robot by hand.</p></div>
-    <div class="spot"><h4>What I built</h4><p>A task on each controller takes a backup at a set time on Sunday. A WinSCP script on the HMI pulls each backup over FTP into that robot&#39;s folder on network storage and checks that it made it. Only then does it delete the oldest backup on the controller, so each robot always keeps its three newest. Credentials live in a separate file, not in the script.</p></div>
-    <div class="spot"><h4>The result</h4><p>Nobody has to do it by hand anymore. That&#39;s over 100 labor hours a year back, and every robot gets a verified backup every week.</p></div>
+    <div class="spot"><h4>How it worked before</h4><p>Someone had to go robot to robot every Sunday and pull the backups by hand. Two people, about an hour each, every week.</p></div>
+    <div class="spot"><h4>What I built</h4><p>Each controller now takes its own backup at a set time on Sunday. Then a WinSCP script on the HMI pulls every backup over FTP into that robot's folder on the network and checks that it got there. Only after that does it delete the oldest backup on the robot, so each one keeps its three newest. The passwords are in a separate file, not in the script.</p></div>
+    <div class="spot"><h4>The result</h4><p>Nobody has to do it by hand anymore. That's over 100 hours a year back, and every robot gets a good backup every week.</p></div>
   </div>
 </section>
 
@@ -219,12 +219,12 @@
   <h2>Skills &amp; certifications</h2>
   <div class="skills-grid">
     <div class="skill-list">
-      <div class="skill"><h4>Troubleshooting &amp; root cause</h4><p>Robotics, electrical, electromechanical, and fluid/pneumatic systems, under production pressure.</p></div>
+      <div class="skill"><h4>Troubleshooting &amp; root cause</h4><p>Robots, electrical, mechanical, and fluid and pneumatic systems, usually with the line down and people waiting.</p></div>
       <div class="skill"><h4>Launch &amp; commissioning</h4><p>New robot cells (sealer, paint, pick &amp; place), BMW IPP and Wax lines, customer-site installs.</p></div>
-      <div class="skill"><h4>Continuous improvement</h4><p>Cycle time reduction, downtime recovery, quality defect elimination, issue tracking to closure.</p></div>
-      <div class="skill"><h4>Controls &amp; networks</h4><p>Remote I/O, PROFINET couplers, robot-to-PLC handshakes, and plant network troubleshooting. Currently learning Siemens TIA Portal.</p></div>
+      <div class="skill"><h4>Continuous improvement</h4><p>Cutting cycle time, fixing repeat downtime and quality defects, and following issues until they're actually closed.</p></div>
+      <div class="skill"><h4>Controls &amp; networks</h4><p>Remote I/O, PROFINET couplers, the robot side of the PLC handshake, and plant network troubleshooting. I'm learning Siemens TIA Portal now.</p></div>
       <div class="skill"><h4>Software &amp; tools</h4><p>ABB RobotStudio / RAPID, Siemens Process Simulate, Dürr 3D Onsite, CAD and 3D printing.</p></div>
-      <div class="skill"><h4>Documentation &amp; training</h4><p>Technical procedures, engineering field changes, onsite customer training.</p></div>
+      <div class="skill"><h4>Documentation &amp; training</h4><p>Writing procedures, doing engineering field changes, and training customers on site.</p></div>
     </div>
     <figure class="feature"><img src="img/robotstudio.jpg" alt="ABB RobotStudio simulation showing a robot and tool geometry" loading="lazy"><figcaption>Offline programming in ABB RobotStudio</figcaption></figure>
   </div>
@@ -236,21 +236,21 @@
       <li>Fanuc Dispense Tool &amp; Programming</li><li>Puritan Bennett 980 / 840 Service</li><li>CCNA (in progress)</li>
       <li>Associate Degree, Management &amp; Diesel Technology (WyoTech)</li>
     </ul>
-    <figure class="small"><img src="img/fanuc-training.jpg" alt="Mark at Fanuc training holding a stack of course manuals" loading="lazy"><figcaption>Fanuc training. Always learning.</figcaption></figure>
+    <figure class="small"><img src="img/fanuc-training.jpg" alt="Mark at Fanuc training holding a stack of course manuals" loading="lazy"><figcaption>At Fanuc training with the course manuals</figcaption></figure>
   </div>
 </section>
 
 <section class="section alt" id="homelab">
   <div class="wrap">
     <h2>Off the clock: the homelab</h2>
-    <p class="lede narrow">Modern automation lives on the network, so I built one. Everything outside my robot work is self-taught, and this is where I practice it. <a href="https://github.com/markmatheson/homelab" target="_blank" rel="noopener">Configs and design notes on GitHub →</a></p>
+    <p class="lede narrow">More and more of automation runs over the network, so I built one at home to learn on. Everything outside of robots I taught myself, mostly here. <a href="https://github.com/markmatheson/homelab" target="_blank" rel="noopener">My configs and notes are on GitHub.</a></p>
     <div class="lab-grid">
       <div class="lab"><h4>Virtualization</h4><p>Three-node Proxmox cluster with high availability and replication. The nodes are named after my kids.</p></div>
-      <div class="lab"><h4>Networking</h4><p>UniFi network segmented with VLANs, WireGuard VPN, and Cloudflare Tunnel for secure remote access with no open ports.</p></div>
-      <div class="lab"><h4>Storage &amp; backup</h4><p>Synology NAS with immutable snapshots and an offline backup drive, protecting against ransomware.</p></div>
-      <div class="lab"><h4>Automation</h4><p>Home Assistant runs the house: lighting, presence, energy, and dashboards.</p></div>
-      <div class="lab"><h4>Self-hosted AI</h4><p>A local LLM operations assistant on a Mac mini that monitors the lab, answers questions, and escalates problems.</p></div>
-      <div class="lab"><h4>Monitoring</h4><p>Uptime monitoring and alerting across every service, the same way I'd want a production line watched.</p></div>
+      <div class="lab"><h4>Networking</h4><p>UniFi network split into VLANs, with WireGuard VPN and Cloudflare Tunnel so I can get in remotely without opening any ports.</p></div>
+      <div class="lab"><h4>Storage &amp; backup</h4><p>Synology NAS with snapshots that can't be changed and an offline backup drive, in case of ransomware.</p></div>
+      <div class="lab"><h4>Automation</h4><p>Home Assistant runs the house, including lights, presence, energy, and dashboards.</p></div>
+      <div class="lab"><h4>Self-hosted AI</h4><p>A local AI assistant on a Mac mini that watches the lab, answers questions, and flags problems.</p></div>
+      <div class="lab"><h4>Monitoring</h4><p>Every service is monitored and alerts me when something goes down, same as I'd want on a production line.</p></div>
     </div>
   </div>
 </section>
@@ -259,8 +259,8 @@
   <h2>Off the clock: printing mobility trainers</h2>
   <div class="skills-grid">
     <div>
-      <p class="lede">I&#39;m a volunteer maker with <a href="https://3d-mobility.org/" target="_blank" rel="noopener">MakeGood</a>, which matches families of kids with mobility challenges to makers who 3D print custom Toddler Mobility Trainers. The family pays nothing.</p>
-      <p>I&#39;ve built two so far on my own printers. It uses the same skills I use at work: dialing in a machine, holding tolerances, and building something that has to work safely the first time, for a kid who&#39;s counting on it.</p>
+      <p class="lede">I volunteer as a maker with <a href="https://3d-mobility.org/" target="_blank" rel="noopener">MakeGood</a>. They connect families of kids with mobility challenges with people who can 3D print a Toddler Mobility Trainer for them, free to the family.</p>
+      <p>I've built two so far on my printers at home. It's a lot of print hours, but seeing a kid sit in one for the first time makes it worth it.</p>
     </div>
     <figure class="feature"><img src="img/makegood-delivery.jpg" alt="Mark kneeling beside a toddler seated in the purple and pink 3D printed mobility trainer he built" loading="lazy"><figcaption>Delivery day. Shared with her mom&#39;s permission.</figcaption></figure>
   </div>
@@ -268,7 +268,7 @@
 
 <section class="wrap section contact" id="contact">
   <h2>Let's talk</h2>
-  <p class="lede narrow">Open to field service, automation, and reliability engineering roles.</p>
+  <p class="lede narrow">I'm open to automation, controls, and field service roles. Reach out anytime.</p>
   <div class="actions">
     <a class="btn primary" href="mailto:mark@markmatheson.dev">mark@markmatheson.dev</a>
     <a class="btn" href="https://www.linkedin.com/in/mark-matheson-bb3274138/" target="_blank" rel="noopener">LinkedIn</a>
