@@ -130,23 +130,23 @@
   <div class="wrap">
     <h2>How I cut cycle time</h2>
     <p class="lede narrow">Most cycle time isn't lost in the motion. It's lost in waiting. A robot finishes one task, then the system starts the next. When a step doesn't actually depend on the one before it, it doesn't have to wait.</p>
-    <p class="narrow">One example: the vision system doesn't need the robot sitting at its ready position to measure the car. So instead of tool change → move to ready → fire vision → calculate corrections, vision fires and the corrections are calculated <em>while the robot is still finishing its tool change</em>. The robot arrives with its offsets already waiting.</p>
+    <p class="narrow">One example, on a sealer robot: the vision system doesn't need the robot sitting at its ready position to measure the car. So instead of tool change → move to ready → fire vision → calculate corrections, vision fires and the corrections are calculated <em>while the robot is still finishing its tool change</em>. The robot arrives with its offsets already waiting.</p>
 
-    <div class="diagram" role="img" aria-label="Animated diagram: the same steps run one at a time versus overlapped. The overlapped version reaches paint sooner, saving time every cycle.">
+    <div class="diagram" role="img" aria-label="Animated diagram: the same steps run one at a time versus overlapped. The overlapped version starts sealing sooner, saving time every cycle.">
       <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg">
         <text class="d-label" x="0" y="22">Before: one step at a time</text>
         <g class="bar" data-x="0" data-w="250"><rect class="d-a" x="0" y="34" width="250" height="34" rx="4"/><text class="d-t" x="12" y="56">Tool change</text></g>
         <g class="bar" data-x="254" data-w="90"><rect class="d-b" x="254" y="34" width="90" height="34" rx="4"/><text class="d-t" x="264" y="56">To ready</text></g>
         <g class="bar" data-x="348" data-w="130"><rect class="d-c" x="348" y="34" width="130" height="34" rx="4"/><text class="d-t" x="360" y="56">Vision</text></g>
         <g class="bar" data-x="482" data-w="110"><rect class="d-c" x="482" y="34" width="110" height="34" rx="4"/><text class="d-t" x="494" y="56">Corrections</text></g>
-        <g class="bar" data-x="596" data-w="124"><rect class="d-p" x="596" y="34" width="124" height="34" rx="4"/><text class="d-t inv" x="608" y="56">Paint →</text></g>
+        <g class="bar" data-x="596" data-w="124"><rect class="d-p" x="596" y="34" width="124" height="34" rx="4"/><text class="d-t inv" x="608" y="56">Seal →</text></g>
 
         <text class="d-label" x="0" y="112">After: independent steps overlap</text>
         <g class="bar" data-x="0" data-w="250"><rect class="d-a" x="0" y="124" width="250" height="34" rx="4"/><text class="d-t" x="12" y="146">Tool change</text></g>
         <g class="bar" data-x="0" data-w="130"><rect class="d-c" x="0" y="162" width="130" height="30" rx="4"/><text class="d-t" x="12" y="180">Vision</text></g>
         <g class="bar" data-x="134" data-w="110"><rect class="d-c" x="134" y="162" width="110" height="30" rx="4"/><text class="d-t" x="146" y="180">Corrections</text></g>
         <g class="bar" data-x="254" data-w="90"><rect class="d-b" x="254" y="124" width="90" height="34" rx="4"/><text class="d-t" x="264" y="146">To ready</text></g>
-        <g class="bar" data-x="348" data-w="124"><rect class="d-p" x="348" y="124" width="124" height="34" rx="4"/><text class="d-t inv" x="360" y="146">Paint →</text></g>
+        <g class="bar" data-x="348" data-w="124"><rect class="d-p" x="348" y="124" width="124" height="34" rx="4"/><text class="d-t inv" x="360" y="146">Seal →</text></g>
 
         <g class="fin">
           <line class="d-guide" x1="348" y1="70" x2="348" y2="232"/>
@@ -188,19 +188,19 @@
 <section class="section alt" id="case-comms">
   <div class="wrap">
     <h2>Case study: the comms drops nobody could pin down</h2>
-    <p class="lede narrow">A paint robot cell kept losing communication between the robot controller and its process board. It went on for about a month and kept getting worse, and the plan was to replace the board.</p>
+    <p class="lede narrow">A sealer robot kept dropping communication between its IRC5 controller and its process board. It had been going on for about a month and getting worse, and the plan was to replace the board.</p>
     <div class="spot-grid">
-      <div class="spot"><h4>The problem</h4><p>Intermittent drops between the IRC5 controller and the process interface board stopped the cell at random. The board was the obvious suspect, but swapping it meant losing a configuration that couldn&#39;t be migrated cleanly. The team was about to call in the OEM.</p></div>
-      <div class="spot"><h4>What I did</h4><p>I was called in on my day off. Instead of replacing parts, I worked through the communication path one piece at a time and showed the board was healthy. The fault followed the cell&#39;s internal network switch.</p></div>
-      <div class="spot"><h4>The proof</h4><p>To settle it, we moved the suspect switch into an offline cell&#39;s controls cabinet, with a PLC and three robots. Within a day it dropped all PLC-to-robot communication there too. The switch was replaced and the original cell ran clean.</p></div>
+      <div class="spot"><h4>The problem</h4><p>The whole maintenance team had been working it, and they were ready to call ABB in. Their plan was a new process board, but nobody knew how to move the configuration over to a new one. They called me in on my day off.</p></div>
+      <div class="spot"><h4>What I did</h4><p>Before swapping anything, I proved where the problem was. The HMI never lost its data, so it was on the controller&#39;s network side. I watched the drops in RobotStudio and checked the board&#39;s link status and boot log: the board was healthy. At the next drop I power-cycled only the internal LAN switch, and comms came right back.</p></div>
+      <div class="spot"><h4>The proof</h4><p>Maintenance wanted proof before closing it out, which was fair. I put the bad switch in our offline cell&#39;s controls cabinet, which ties three robots to a PLC. Within a day it dropped all PLC-to-robot comms there too. A month-long problem was fixed with a cheap switch: no board swap, no ABB service call.</p></div>
     </div>
-    <p class="narrow lesson"><strong>Takeaway:</strong> on a network, the loudest symptom isn&#39;t always the cause. Prove it with data, then reproduce it, before you spend money on parts.</p>
+    <p class="narrow lesson"><strong>Takeaway:</strong> intermittent problems will fool you. Prove where it is before you start throwing parts at it.</p>
   </div>
 </section>
 
 <section class="wrap section" id="case-backups">
   <h2>Case study: automating robot backups</h2>
-  <p class="lede narrow">Backing up the robot controllers in my area was a manual Sunday job. I automated it end to end.</p>
+  <p class="lede narrow">Backing up around 40 ABB robots was a manual Sunday job. I automated it end to end.</p>
   <div class="spot-stats">
     <div><span class="num">~40</span><span class="lbl">robots covered</span></div>
     <div><span class="num">0</span><span class="lbl">people needed on Sundays</span></div>
@@ -208,9 +208,9 @@
     <div><span class="num">3</span><span class="lbl">restore points kept on each robot</span></div>
   </div>
   <div class="spot-grid">
-    <div class="spot"><h4>The problem</h4><p>Two people spent about an hour every Sunday pulling backups off each controller by hand. It was slow, easy to skip, and when a backup was missed you only found out when you needed it.</p></div>
-    <div class="spot"><h4>What I built</h4><p>A scheduled task on each controller takes its own backup on Sunday. A script on the line HMI then pulls each backup over FTP into a per-robot folder on the network, verifies the copy, and trims the controller down to the three newest. Credentials live outside the script.</p></div>
-    <div class="spot"><h4>The result</h4><p>Every robot gets a verified, off-controller backup every week, with nobody in the loop. The two people got their Sundays back, and recovering from a bad program or a controller failure starts from a known-good copy.</p></div>
+    <div class="spot"><h4>The problem</h4><p>Every Sunday, two programmers spent about an hour each backing up every robot by hand.</p></div>
+    <div class="spot"><h4>What I built</h4><p>A task on each controller takes a backup at a set time on Sunday. A WinSCP script on the HMI pulls each backup over FTP into that robot&#39;s folder on network storage and checks that it made it. Only then does it delete the oldest backup on the controller, so each robot always keeps its three newest. Credentials live in a separate file, not in the script.</p></div>
+    <div class="spot"><h4>The result</h4><p>Nobody has to do it by hand anymore. That&#39;s over 100 labor hours a year back, and every robot gets a verified backup every week.</p></div>
   </div>
 </section>
 
