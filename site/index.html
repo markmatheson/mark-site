@@ -185,6 +185,35 @@
   <p class="narrow lesson"><strong>What I&#39;d do sooner:</strong> start on the plug deck with the line workers on day one. Their hand technique was the key to the robot programs.</p>
 </section>
 
+<section class="section alt" id="case-comms">
+  <div class="wrap">
+    <h2>Case study: the comms drops nobody could pin down</h2>
+    <p class="lede narrow">A paint robot cell kept losing communication between the robot controller and its process board. It went on for about a month and kept getting worse, and the plan was to replace the board.</p>
+    <div class="spot-grid">
+      <div class="spot"><h4>The problem</h4><p>Intermittent drops between the IRC5 controller and the process interface board stopped the cell at random. The board was the obvious suspect, but swapping it meant losing a configuration that couldn&#39;t be migrated cleanly. The team was about to call in the OEM.</p></div>
+      <div class="spot"><h4>What I did</h4><p>I was called in on my day off. Instead of replacing parts, I worked through the communication path one piece at a time and showed the board was healthy. The fault followed the cell&#39;s internal network switch.</p></div>
+      <div class="spot"><h4>The proof</h4><p>To settle it, we moved the suspect switch into an offline cell&#39;s controls cabinet, with a PLC and three robots. Within a day it dropped all PLC-to-robot communication there too. The switch was replaced and the original cell ran clean.</p></div>
+    </div>
+    <p class="narrow lesson"><strong>Takeaway:</strong> on a network, the loudest symptom isn&#39;t always the cause. Prove it with data, then reproduce it, before you spend money on parts.</p>
+  </div>
+</section>
+
+<section class="wrap section" id="case-backups">
+  <h2>Case study: automating robot backups</h2>
+  <p class="lede narrow">Backing up the robot controllers in my area was a manual Sunday job. I automated it end to end.</p>
+  <div class="spot-stats">
+    <div><span class="num">~40</span><span class="lbl">robots covered</span></div>
+    <div><span class="num">0</span><span class="lbl">people needed on Sundays</span></div>
+    <div><span class="num">100+</span><span class="lbl">labor hours saved a year</span></div>
+    <div><span class="num">3</span><span class="lbl">restore points kept on each robot</span></div>
+  </div>
+  <div class="spot-grid">
+    <div class="spot"><h4>The problem</h4><p>Two people spent about an hour every Sunday pulling backups off each controller by hand. It was slow, easy to skip, and when a backup was missed you only found out when you needed it.</p></div>
+    <div class="spot"><h4>What I built</h4><p>A scheduled task on each controller takes its own backup on Sunday. A script on the line HMI then pulls each backup over FTP into a per-robot folder on the network, verifies the copy, and trims the controller down to the three newest. Credentials live outside the script.</p></div>
+    <div class="spot"><h4>The result</h4><p>Every robot gets a verified, off-controller backup every week, with nobody in the loop. The two people got their Sundays back, and recovering from a bad program or a controller failure starts from a known-good copy.</p></div>
+  </div>
+</section>
+
 <section class="wrap section" id="skills">
   <h2>Skills &amp; certifications</h2>
   <div class="skills-grid">
@@ -192,6 +221,7 @@
       <div class="skill"><h4>Troubleshooting &amp; root cause</h4><p>Robotics, electrical, electromechanical, and fluid/pneumatic systems, under production pressure.</p></div>
       <div class="skill"><h4>Launch &amp; commissioning</h4><p>New robot cells (sealer, paint, pick &amp; place), BMW IPP and Wax lines, customer-site installs.</p></div>
       <div class="skill"><h4>Continuous improvement</h4><p>Cycle time reduction, downtime recovery, quality defect elimination, issue tracking to closure.</p></div>
+      <div class="skill"><h4>Controls &amp; networks</h4><p>Remote I/O, PROFINET couplers, robot-to-PLC handshakes, and plant network troubleshooting. Currently learning Siemens TIA Portal.</p></div>
       <div class="skill"><h4>Software &amp; tools</h4><p>ABB RobotStudio / RAPID, Siemens Process Simulate, Dürr 3D Onsite, CAD and 3D printing.</p></div>
       <div class="skill"><h4>Documentation &amp; training</h4><p>Technical procedures, engineering field changes, onsite customer training.</p></div>
     </div>
@@ -221,6 +251,17 @@
       <div class="lab"><h4>Self-hosted AI</h4><p>A local LLM operations assistant on a Mac mini that monitors the lab, answers questions, and escalates problems.</p></div>
       <div class="lab"><h4>Monitoring</h4><p>Uptime monitoring and alerting across every service, the same way I'd want a production line watched.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="wrap section" id="makegood">
+  <h2>Off the clock: printing mobility trainers</h2>
+  <div class="skills-grid">
+    <div>
+      <p class="lede">I&#39;m a volunteer maker with <a href="https://3d-mobility.org/" target="_blank" rel="noopener">MakeGood</a>, which matches families of kids with mobility challenges to makers who 3D print custom Toddler Mobility Trainers. The family pays nothing.</p>
+      <p>I&#39;ve built two so far on my own printers. It uses the same skills I use at work: dialing in a machine, holding tolerances, and building something that has to work safely the first time, for a kid who&#39;s counting on it.</p>
+    </div>
+    <figure class="feature"><img src="img/makegood-delivery.jpg" alt="Mark kneeling beside a toddler seated in the purple and pink 3D printed mobility trainer he built" loading="lazy"><figcaption>Delivery day. Shared with her mom&#39;s permission.</figcaption></figure>
   </div>
 </section>
 
