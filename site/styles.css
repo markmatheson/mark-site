@@ -215,3 +215,20 @@ figcaption { font-size: .82rem; color: var(--muted); margin-top: .4rem; }
 .sw-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; margin-bottom: 8px; }
 .sw-grid .skill:first-child { padding-top: 14px; }
 @media (max-width: 820px) { .sw-grid { grid-template-columns: 1fr; } }
+
+/* Collapsible job and project tiles */
+details.job > summary { list-style: none; cursor: pointer; display: block; }
+details.job > summary::-webkit-details-marker { display: none; }
+details.job > summary .job-head { margin-bottom: .35rem; }
+details.job .teaser { margin: 0; color: var(--muted); }
+details.job .more { display: inline-flex; align-items: center; gap: .35rem; margin-top: .6rem; font-weight: 600; font-size: .92rem; color: var(--accent); }
+details.job .more::after { content: ""; width: .5rem; height: .5rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+details.job[open] .more::after { transform: translateY(2px) rotate(-135deg); }
+details.job .hide, details.job[open] .show { display: none; }
+details.job[open] .hide { display: inline; }
+details.job > summary:hover .more { text-decoration: underline; }
+details.job > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 4px; }
+details.job[open] > summary { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+details.project h3 { font-size: 1.2rem; font-weight: 700; margin: 0 0 .35rem; }
+details.project .job-body > .lede { margin-top: 0; }
+#projects .wrap > .lede { margin-bottom: 28px; }

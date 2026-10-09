@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2026100901">
+<link rel="stylesheet" href="styles.css?v=2026100902">
 </head>
 <body>
 
@@ -52,12 +52,18 @@
 
 <section class="wrap section" id="experience">
   <h2>Experience</h2>
+  <p class="lede narrow">Tap a job to see the details.</p>
 
-  <article class="job">
+  <details class="job">
+    <summary>
     <div class="job-head">
       <div><h3>Robot Specialist</h3><p class="org">BMW Manufacturing · Greer, SC</p></div>
       <p class="dates">Feb 2023 – Present</p>
     </div>
+    <p class="teaser">Lead programmer in the paint shop on ABB, Dürr, and Fanuc robots.</p>
+    <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
     <ul>
       <li>Lead programmer in the paint shop on ABB, Dürr, and Fanuc robots. I handle new model programming, design changes, and day-to-day improvements.</li>
       <li>When a robot goes down, I'm usually one of the people getting it back up. We hold <strong>95% equipment availability</strong>.</li>
@@ -69,13 +75,19 @@
       <figure><img src="img/truprint-3000.jpg" alt="TRUMPF TruPrint 3000 metal 3D printer" loading="lazy"><figcaption>TruPrint 3000 metal 3D printer</figcaption></figure>
       <figure class="clip"><video src="img/pvc-flat-tip.mp4" poster="img/pvc-flat-tip-poster.jpg" muted loop playsinline preload="metadata" aria-label="PVC sealer spraying from an Omni flat-tip nozzle during a pressure test"></video><figcaption>Pressure-testing PVC with an Omni flat tip</figcaption></figure>
     </div>
-  </article>
+  </div>
+  </details>
 
-  <article class="job">
+  <details class="job">
+    <summary>
     <div class="job-head">
       <div><h3>Field Service Engineer</h3><p class="org">Medtronic</p></div>
       <p class="dates">Jan 2021 – Feb 2023</p>
     </div>
+    <p class="teaser">Ventilator field service across a 32-account, three-state territory.</p>
+    <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
     <ul>
       <li>Covered a <strong>32-account territory</strong> across South Carolina, western North Carolina, and east Tennessee, mostly on my own.</li>
       <li>Installed, repaired, and upgraded Puritan Bennett 980 and 840 ventilators in hospitals, including through COVID. There was no room for mistakes.</li>
@@ -85,13 +97,19 @@
       <figure><img src="img/pb980-shop.jpg" alt="Puritan Bennett 980 ventilators in a service shop" loading="lazy"><figcaption>PB980 ventilators in for service</figcaption></figure>
       <figure><img src="img/field-or.jpg" alt="Mark in scrubs in a hospital operating room" loading="lazy"><figcaption>On site in the OR</figcaption></figure>
     </div>
-  </article>
+  </div>
+  </details>
 
-  <article class="job">
+  <details class="job">
+    <summary>
     <div class="job-head">
       <div><h3>Field Service Engineer</h3><p class="org">ABB</p></div>
       <p class="dates">Nov 2017 – Dec 2020</p>
     </div>
+    <p class="teaser">Commissioned paint and sealer robot cells, including BMW's masking plug cell and IPP4 line.</p>
+    <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
     <ul>
       <li>Traveled to customer plants to commission new sealer and paint robot cells, from install until production took them over. That included BMW's new IPP4 paint line and the masking plug cell, and a bumper paint line at Honda.</li>
       <li>Programmed Flex Vision and pick-and-place applications. IRC5/IRC5P controllers and IPS paint systems.</li>
@@ -103,13 +121,19 @@
       <figure><img src="img/ipp4-feather-duster-cell.jpg" alt="ABB robot with a feather duster tool in the IPP4 paint line at BMW" loading="lazy"><figcaption>The IPP4 feather duster cell at BMW, which I commissioned</figcaption></figure>
       <figure><img src="img/feather-duster-cad.jpg" alt="3D model of an ABB robot holding a feather duster tool" loading="lazy"><figcaption>3D model of the feather duster robot and tool</figcaption></figure>
     </div>
-  </article>
+  </div>
+  </details>
 
-  <article class="job">
+  <details class="job">
+    <summary>
     <div class="job-head">
       <div><h3>Robot Programmer</h3><p class="org">BMW Manufacturing · Greer, SC</p></div>
       <p class="dates">Aug 2011 – Nov 2017</p>
     </div>
+    <p class="teaser">Paint programs for new models, and commissioning the IPP and Wax lines.</p>
+    <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
     <ul>
       <li>Created paint programs for new models and ran paint trial bodies.</li>
       <li>Troubleshot and corrected paint defects. Set up color tables for Bell RB1000 applicators.</li>
@@ -119,23 +143,102 @@
     <div class="photos">
       <figure><img src="img/paint-booth-robots.jpg" alt="Orange paint robots on both sides of an empty paint booth" loading="lazy"><figcaption>Paint robots in an empty booth</figcaption></figure>
     </div>
-  </article>
+  </div>
+  </details>
 
-  <article class="job compact">
+  <details class="job compact">
+    <summary>
     <div class="job-head">
       <div><h3>Diesel Technician</h3><p class="org">Morgan Corporation</p></div>
       <p class="dates">Sep 2010 – Jul 2011</p>
     </div>
+    <p class="teaser">Where I got my start.</p>
+    <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
     <p>Where I got my start, doing overhauls and off-site repairs and keeping downtime low.</p>
     <div class="photos">
       <figure><img src="img/morgan-bay.jpg" alt="A green tractor with its hood open and two heavy axles on stands in a shop bay" loading="lazy"><figcaption>My bay at Morgan, with a tractor and its axles torn down</figcaption></figure>
     </div>
-  </article>
+  </div>
+  </details>
 </section>
 
-<section class="section alt" id="cycle-time">
+<section class="section alt" id="projects">
   <div class="wrap">
-    <h2>How I cut cycle time</h2>
+  <h2>Projects</h2>
+  <p class="lede narrow">A few problems I've solved. Tap one to read the whole story.</p>
+  <details class="job project" id="masking-plug">
+    <summary>
+      <h3>BMW masking plug cell</h3>
+      <p class="teaser">16 robots installing plugs in BMW car bodies, on robots and vision I'd never used. It launched on time.</p>
+      <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
+  <p class="lede narrow">In 2018 ABB put me on a 16-robot cell at BMW that puts masking plugs into the car bodies. I was a paint guy, and I'd never programmed these robots or this vision system. We launched on time anyway.</p>
+  <div class="spot-stats">
+    <div><span class="num">16</span><span class="lbl">robots in the cell</span></div>
+    <div><span class="num">60s</span><span class="lbl">cycle time</span></div>
+    <div><span class="num">95%</span><span class="lbl">plug success rate</span></div>
+    <div><span class="num">On time</span><span class="lbl">hit the launch date</span></div>
+  </div>
+  <div class="spot-grid">
+    <div class="spot"><h4>The problem</h4><p>The plugs only seat if you're right on the hole, and the body could shift a little while the robots pushed on it. Just driving the plug straight in would miss or seat it badly.</p></div>
+    <div class="spot"><h4>What I did</h4><p>I learned it on site from ABB's manuals, a lot of trial and error, and BMW's people. I set up robots on opposite sides of the body to push at the same time, so they held the body still. Then I watched how the line workers put plugs in by hand and copied their motion into the robot paths with RelTool offsets.</p></div>
+    <div class="spot"><h4>The result</h4><p>It launched on the date at a 60-second cycle and 95% plug success. Most of the misses came from plugs jamming on the feed conveyor, not the robots putting them in. ABB named me Field Service Employee of the Month.</p></div>
+  </div>
+  <blockquote class="quote">
+    <p>&ldquo;Mark has performed above expectations and has excelled throughout. Mark has been instrumental in the success of the Masking Plug project.&rdquo;</p>
+    <cite>Director of Field Services &amp; Technical Support, ABB. Employee of the Month award, June 2018</cite>
+  </blockquote>
+  <p class="narrow lesson">If I did it again, I'd go stand with the line workers on day one. The way they did it by hand ended up being the key to the whole thing.</p>
+  <p class="narrow lesson">BMW posted about the cell on LinkedIn in November 2018. The robots put in about 61,000 plugs a day, work that used to be hard on people's shoulders, necks, and hands. <a href="https://www.linkedin.com/feed/update/urn:li:activity:6467834112106389504/" target="_blank" rel="noopener">Here's BMW's post</a>, and it's still on their <a href="https://www.bmwgroup-werke.com/spartanburg/en/our-plant.html" target="_blank" rel="noopener">Spartanburg plant page</a>.</p>
+</div>
+  </details>
+  <details class="job project" id="case-comms">
+    <summary>
+      <h3>A month of comms drops</h3>
+      <p class="teaser">A sealer robot kept losing comms. Everyone blamed the board, but it was a cheap network switch.</p>
+      <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
+    <p class="lede narrow">We had a sealer robot that kept losing comms between the IRC5 and the process board. It had been going on for about a month and getting worse.</p>
+    <div class="spot-grid">
+      <div class="spot"><h4>The problem</h4><p>Maintenance had been on it for weeks and was about ready to call ABB in. Their plan was to replace the board, but nobody knew how to move the config over to a new one, so they called me in on my day off.</p></div>
+      <div class="spot"><h4>What I did</h4><p>I wanted to know where the problem was before I swapped anything. The HMI never lost its data, so I knew it was on the controller's network side. I watched the drops in RobotStudio and checked the board's link status and boot log, and the board looked fine. The next time it dropped, I power-cycled just the internal LAN switch and comms came right back.</p></div>
+      <div class="spot"><h4>The proof</h4><p>Maintenance wanted proof before they closed it out, which was fair. I put the bad switch in the controls cabinet on our offline cell, where three robots talk to a PLC. Within a day it dropped all the comms there too. So we swapped a cheap switch instead of the board, and never had to call ABB.</p></div>
+    </div>
+    <p class="narrow lesson">Intermittent problems will fool you. I try to prove where it is before I start throwing parts at it.</p>
+  </div>
+  </details>
+  <details class="job project" id="case-backups">
+    <summary>
+      <h3>Automating robot backups</h3>
+      <p class="teaser">Automating weekly backups for about 40 ABB robots. Over 100 hours a year back.</p>
+      <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
+  <p class="lede narrow">Every Sunday, two of our programmers spent about an hour each backing up around 40 ABB robots by hand. So I automated it.</p>
+  <div class="spot-stats">
+    <div><span class="num">~40</span><span class="lbl">robots covered</span></div>
+    <div><span class="num">0</span><span class="lbl">people needed on Sundays</span></div>
+    <div><span class="num">100+</span><span class="lbl">labor hours saved a year</span></div>
+    <div><span class="num">3</span><span class="lbl">restore points kept on each robot</span></div>
+  </div>
+  <div class="spot-grid">
+    <div class="spot"><h4>How it worked before</h4><p>Someone had to go robot to robot every Sunday and pull the backups by hand. Two people, about an hour each, every week.</p></div>
+    <div class="spot"><h4>What I built</h4><p>Each controller now takes its own backup at a set time on Sunday. Then a WinSCP script on the HMI pulls every backup over FTP into that robot's folder on the network and checks that it got there. Only after that does it delete the oldest backup on the robot, so each one keeps its three newest. The passwords are in a separate file, not in the script.</p></div>
+    <div class="spot"><h4>The result</h4><p>Nobody has to do it by hand anymore. That's over 100 hours a year back, and every robot gets a good backup every week.</p></div>
+  </div>
+</div>
+  </details>
+  <details class="job project" id="cycle-time">
+    <summary>
+      <h3>How I cut cycle time</h3>
+      <p class="teaser">Overlapping steps that don't depend on each other, with an example from a sealer robot.</p>
+      <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
     <p class="lede narrow">A lot of cycle time gets wasted waiting. The robot finishes one thing, and only then does the next thing start. If a step doesn't really need the one before it to finish, it can start early.</p>
     <p class="narrow">Here's one I did on a sealer robot. The program did a tool change, moved to ready, fired the vision system, then calculated the corrections. But vision doesn't need the robot at ready to measure the car. So I moved it up, and now vision fires and the corrections get calculated <em>while the robot is still doing its tool change</em>. By the time it gets to ready, the offsets are already there.</p>
 
@@ -169,56 +272,7 @@
       </div>
     </div>
   </div>
-</section>
-
-<section class="wrap section" id="masking-plug">
-  <h2>Project spotlight: BMW masking plug cell</h2>
-  <p class="lede narrow">In 2018 ABB put me on a 16-robot cell at BMW that puts masking plugs into the car bodies. I was a paint guy, and I'd never programmed these robots or this vision system. We launched on time anyway.</p>
-  <div class="spot-stats">
-    <div><span class="num">16</span><span class="lbl">robots in the cell</span></div>
-    <div><span class="num">60s</span><span class="lbl">cycle time</span></div>
-    <div><span class="num">95%</span><span class="lbl">plug success rate</span></div>
-    <div><span class="num">On time</span><span class="lbl">hit the launch date</span></div>
-  </div>
-  <div class="spot-grid">
-    <div class="spot"><h4>The problem</h4><p>The plugs only seat if you're right on the hole, and the body could shift a little while the robots pushed on it. Just driving the plug straight in would miss or seat it badly.</p></div>
-    <div class="spot"><h4>What I did</h4><p>I learned it on site from ABB's manuals, a lot of trial and error, and BMW's people. I set up robots on opposite sides of the body to push at the same time, so they held the body still. Then I watched how the line workers put plugs in by hand and copied their motion into the robot paths with RelTool offsets.</p></div>
-    <div class="spot"><h4>The result</h4><p>It launched on the date at a 60-second cycle and 95% plug success. Most of the misses came from plugs jamming on the feed conveyor, not the robots putting them in. ABB named me Field Service Employee of the Month.</p></div>
-  </div>
-  <blockquote class="quote">
-    <p>&ldquo;Mark has performed above expectations and has excelled throughout. Mark has been instrumental in the success of the Masking Plug project.&rdquo;</p>
-    <cite>Director of Field Services &amp; Technical Support, ABB. Employee of the Month award, June 2018</cite>
-  </blockquote>
-  <p class="narrow lesson">If I did it again, I'd go stand with the line workers on day one. The way they did it by hand ended up being the key to the whole thing.</p>
-  <p class="narrow lesson">BMW posted about the cell on LinkedIn in November 2018. The robots put in about 61,000 plugs a day, work that used to be hard on people's shoulders, necks, and hands. <a href="https://www.linkedin.com/feed/update/urn:li:activity:6467834112106389504/" target="_blank" rel="noopener">Here's BMW's post</a>, and it's still on their <a href="https://www.bmwgroup-werke.com/spartanburg/en/our-plant.html" target="_blank" rel="noopener">Spartanburg plant page</a>.</p>
-</section>
-
-<section class="section alt" id="case-comms">
-  <div class="wrap">
-    <h2>Case study: a month of comms drops</h2>
-    <p class="lede narrow">We had a sealer robot that kept losing comms between the IRC5 and the process board. It had been going on for about a month and getting worse.</p>
-    <div class="spot-grid">
-      <div class="spot"><h4>The problem</h4><p>Maintenance had been on it for weeks and was about ready to call ABB in. Their plan was to replace the board, but nobody knew how to move the config over to a new one, so they called me in on my day off.</p></div>
-      <div class="spot"><h4>What I did</h4><p>I wanted to know where the problem was before I swapped anything. The HMI never lost its data, so I knew it was on the controller's network side. I watched the drops in RobotStudio and checked the board's link status and boot log, and the board looked fine. The next time it dropped, I power-cycled just the internal LAN switch and comms came right back.</p></div>
-      <div class="spot"><h4>The proof</h4><p>Maintenance wanted proof before they closed it out, which was fair. I put the bad switch in the controls cabinet on our offline cell, where three robots talk to a PLC. Within a day it dropped all the comms there too. So we swapped a cheap switch instead of the board, and never had to call ABB.</p></div>
-    </div>
-    <p class="narrow lesson">Intermittent problems will fool you. I try to prove where it is before I start throwing parts at it.</p>
-  </div>
-</section>
-
-<section class="wrap section" id="case-backups">
-  <h2>Case study: automating robot backups</h2>
-  <p class="lede narrow">Every Sunday, two of our programmers spent about an hour each backing up around 40 ABB robots by hand. So I automated it.</p>
-  <div class="spot-stats">
-    <div><span class="num">~40</span><span class="lbl">robots covered</span></div>
-    <div><span class="num">0</span><span class="lbl">people needed on Sundays</span></div>
-    <div><span class="num">100+</span><span class="lbl">labor hours saved a year</span></div>
-    <div><span class="num">3</span><span class="lbl">restore points kept on each robot</span></div>
-  </div>
-  <div class="spot-grid">
-    <div class="spot"><h4>How it worked before</h4><p>Someone had to go robot to robot every Sunday and pull the backups by hand. Two people, about an hour each, every week.</p></div>
-    <div class="spot"><h4>What I built</h4><p>Each controller now takes its own backup at a set time on Sunday. Then a WinSCP script on the HMI pulls every backup over FTP into that robot's folder on the network and checks that it got there. Only after that does it delete the oldest backup on the robot, so each one keeps its three newest. The passwords are in a separate file, not in the script.</p></div>
-    <div class="spot"><h4>The result</h4><p>Nobody has to do it by hand anymore. That's over 100 hours a year back, and every robot gets a good backup every week.</p></div>
+  </details>
   </div>
 </section>
 
@@ -338,6 +392,20 @@
   if (!v) return;
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) { v.controls = true; return; }
   new IntersectionObserver(([e]) => { e.isIntersecting ? v.play().catch(() => {}) : v.pause(); }, { threshold: 0.4 }).observe(v);
+})();
+(() => {
+  // Open a collapsed job or project when a link points into it.
+  const openTo = hash => {
+    const el = hash && document.getElementById(hash.slice(1));
+    if (!el) return;
+    const d = el.closest("details");
+    if (d) { d.open = true; requestAnimationFrame(() => el.scrollIntoView({ behavior: "smooth", block: "start" })); }
+  };
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (a) { e.preventDefault(); history.replaceState(null, "", a.hash); openTo(a.hash); }
+  });
+  openTo(location.hash);
 })();
 </script>
 </body>
