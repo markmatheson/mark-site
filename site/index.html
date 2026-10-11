@@ -253,12 +253,29 @@ if ($backupFolders.Count -gt $KeepOnRobot) {
   <p class="lede narrow">For a new model launch, the hatch was different and we needed to hit a seam that none of our nozzles could reach. So I made one that could.</p>
   <div class="spot-grid">
     <div class="spot"><h4>The problem</h4><p>The new hatch put the seam somewhere our existing nozzles just couldn't get to.</p></div>
-    <div class="spot"><h4>What I did</h4><p>I designed a custom nozzle in Fusion and printed it on our metal 3D printer. Then I ran trials with it in the offline cell.</p></div>
-    <div class="spot"><h4>The result</h4><p>Once the trials worked, we added it to the robots on the line.</p></div>
+    <div class="spot"><h4>What I did</h4><p>I designed a custom nozzle in Fusion. I printed the first one in plastic on a Bambu Lab to check the fit, since that's cheaper and faster. Then I printed the real one on our metal 3D printer.</p></div>
+    <div class="spot"><h4>The result</h4><p>I ran a test program with it in the offline cell to dial in the pressure we needed. Once that was right, we added it to the robots on the line.</p></div>
+  </div>
+  <div class="photos one">
+    <figure><img src="img/nozzle-trial-beads.jpg" alt="Plastic prototype nozzle and metal printed nozzle lying on foil next to test beads, with handwritten notes" loading="lazy"><figcaption>The plastic prototype, the metal nozzle, and the test beads I ran to dial in the pressure</figcaption></figure>
   </div>
   <div class="photos fit">
     <figure><img src="img/nozzle-render.jpg" alt="3D render of a long custom nozzle with a bent tip and a two-hole mounting base" loading="lazy"><figcaption>The nozzle I designed in Fusion, with close-ups of the tip and base</figcaption></figure>
     <figure><img src="img/nozzle-process-simulate.jpg" alt="Simulation view of an orange paint robot wrist with the custom nozzle mounted on the tool" loading="lazy"><figcaption>The nozzle on the robot in Process Simulate</figcaption></figure>
+  </div>
+</div>
+  </details>
+  <details class="job project" id="vision">
+    <summary>
+      <h3>Robot vision</h3>
+      <p class="teaser">Two cameras, triangulation, and the camera network behind it.</p>
+      <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
+    </summary>
+    <div class="job-body">
+  <p class="lede narrow">A lot of our robots use vision to find the car before they work on it. These are from ABB FlexVision, which uses two cameras to find a feature and triangulate where it is.</p>
+  <div class="photos one">
+    <figure><img src="img/flexvision.jpg" alt="ABB FlexVision on a cabinet screen with two camera views locked onto a hole and a list of locate and inspect tasks" loading="lazy"><figcaption>FlexVision with both cameras locked onto a hole</figcaption></figure>
+    <figure><img src="img/cognex-gige.jpg" alt="Cognex GigE Vision configuration tool showing camera network connections and settings" loading="lazy"><figcaption>Setting up the camera network in Cognex's GigE tool</figcaption></figure>
   </div>
 </div>
   </details>
@@ -273,9 +290,10 @@ if ($backupFolders.Count -gt $KeepOnRobot) {
   <div class="spot-grid">
     <div class="spot"><h4>What they're for</h4><p>I made screens that help us control and troubleshoot the robot cell.</p></div>
     <div class="spot"><h4>How they work</h4><p>The buttons are tied to bools in the robot program, so pressing one changes what the program does. I pick the signals and variables I want and bind them to buttons, lights or a live trend.</p></div>
-    <div class="spot"><h4>This one</h4><p>A live TCP speed trend, plus on/off buttons for a tip and a blowoff. It's all custom.</p></div>
+    <div class="spot"><h4>The doser screen</h4><p>I built this one to show both dosers live: fill levels, pressures, material temp, the valves, and the enable buttons. It's all custom.</p></div>
   </div>
   <div class="photos one">
+    <figure><img src="img/robview-doser-screen.jpg" alt="RobView screen in run mode showing two dosers with fill levels, pressures, valves and enable buttons" loading="lazy"><figcaption>The doser screen I built, running on the line</figcaption></figure>
     <figure><img src="img/robview-screen-editor.png" alt="RobView screen editor with a TCP speed trend, on/off buttons, and the dialog for binding robot tags" loading="lazy"><figcaption>Building a screen in RobView and binding it to robot tags. Network details blurred.</figcaption></figure>
   </div>
 </div>
