@@ -240,7 +240,15 @@ if ($backupFolders.Count -gt $KeepOnRobot) {
         $session.RemoveFiles(&quot;$RemoteBackupParent/$($old.Name)&quot;) | Out-Null
     }
 }</code></pre>
-  <p class="narrow lesson"><a href="code/ABB-BackupTransfer.ps1" download>Download the full script</a> and an <a href="code/robots.example.csv" download>example robot list</a>, or see it <a href="https://github.com/markmatheson/ABB-robot-Backup-script" target="_blank" rel="noopener">on GitHub</a>. I swapped the real paths, robot names and logins for made-up ones.</p>
+  <p class="narrow">The robots start their own backups with a small RAPID module I wrote. This one's from our offline cell, where it runs on Saturdays. It waits until there's no job running and none queued for five straight minutes, so it never kicks off during a short gap between cars. Then it fires the backup and saves the date so it only runs once.</p>
+  <pre class="code"><code>IF Timer&gt;=300 AND JobInProgress=0 AND JobPending=0 THEN
+    ! 5 minutes of no JobInProgress and no JobPending means production
+    ! is genuinely stopped (normal cycle time is 60 sec - a 5 min idle
+    ! window will never occur during a running shift, only a stopped line).
+    PulseDO\PLength:=0.2, doBackup;
+    dateSaved:=CDate();
+    Backup_Complete:=TRUE;</code></pre>
+  <p class="narrow lesson"><a href="code/ABB-BackupTransfer.ps1" download>Download the full script</a> and an <a href="code/robots.example.csv" download>example robot list</a>, the <a href="code/AutoBackup.mod" download>RAPID module</a>, or see it all <a href="https://github.com/markmatheson/ABB-robot-Backup-script" target="_blank" rel="noopener">on GitHub</a>. I swapped the real paths, robot names and logins for made-up ones.</p>
 </div>
   </details>
   <details class="job project" id="custom-nozzle">
