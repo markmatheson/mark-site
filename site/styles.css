@@ -237,3 +237,8 @@ details.project .job-body > .lede { margin-top: 0; }
 .code-title { font-size: 1rem; font-weight: 700; color: var(--accent); margin: 28px 0 0; }
 pre.code { background: var(--hero-bg); color: var(--hero-ink); border-radius: 12px; padding: 18px 20px; overflow-x: auto; font-size: .82rem; line-height: 1.5; margin: 16px 0 0; }
 pre.code code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre; }
+
+/* Photos shown whole (renders, screenshots) */
+.photos.fit { align-items: start; }
+.photos.fit img, .photos.one img { aspect-ratio: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); }
+.photos.one { grid-template-columns: 1fr; }
