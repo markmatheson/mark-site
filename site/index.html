@@ -268,11 +268,16 @@ if ($backupFolders.Count -gt $KeepOnRobot) {
   <details class="job project" id="vision">
     <summary>
       <h3>Robot vision</h3>
-      <p class="teaser">Two cameras, triangulation, and the camera network behind it.</p>
+      <p class="teaser">A new car had a hole inside a hole. I taught the vision system a new task to find the right one.</p>
       <span class="more"><span class="show">Show details</span><span class="hide">Hide details</span></span>
     </summary>
     <div class="job-body">
-  <p class="lede narrow">A lot of our robots use vision to find the car before they work on it. These are from ABB FlexVision, which uses two cameras to find a feature and triangulate where it is.</p>
+  <p class="lede narrow">When we launch new cars, some of the holes are tricky enough that I have to teach the vision system a new task for them.</p>
+  <div class="spot-grid">
+    <div class="spot"><h4>The problem</h4><p>One time we had a hole inside a hole. The tasks we already had weren't made for that.</p></div>
+    <div class="spot"><h4>What I did</h4><p>I taught a new task for that hole and masked out the inside one.</p></div>
+    <div class="spot"><h4>The result</h4><p>Now I call that task from the robot program, so it finds the hole on that model more repeatably and accurately.</p></div>
+  </div>
   <div class="photos one">
     <figure><img src="img/flexvision.jpg" alt="ABB FlexVision on a cabinet screen with two camera views locked onto a hole and a list of locate and inspect tasks" loading="lazy"><figcaption>FlexVision with both cameras locked onto a hole</figcaption></figure>
     <figure><img src="img/cognex-gige.jpg" alt="Cognex GigE Vision configuration tool showing camera network connections and settings" loading="lazy"><figcaption>Setting up the camera network in Cognex's GigE tool</figcaption></figure>
