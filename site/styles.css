@@ -244,3 +244,4 @@ pre.code code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, mono
 .photos.one { grid-template-columns: 1fr; }
 .photos.one img { width: auto; max-width: 100%; max-height: 720px; margin: 0 auto; display: block; }
 .photos.one figcaption { text-align: center; }
+.photos .spin video { width: 100%; max-height: 640px; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 8px; display: block; }
