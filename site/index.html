@@ -230,6 +230,17 @@
     <div class="spot"><h4>What I built</h4><p>Each controller now takes its own backup at a set time on Sunday. Then a WinSCP script on the HMI pulls every backup over FTP into that robot's folder on the network and checks that it got there. Only after that does it delete the oldest backup on the robot, so each one keeps its three newest. The passwords are in a separate file, not in the script.</p></div>
     <div class="spot"><h4>The result</h4><p>Nobody has to do it by hand anymore. That's over 100 hours a year back, and every robot gets a good backup every week.</p></div>
   </div>
+  <h4 class="code-title">The code</h4>
+  <p class="narrow">It's a PowerShell script I wrote on my own laptop and tested at work. It reads a list of robots, pings each one, pulls the newest backup over FTP, and files it on the network by year and month. If a robot is offline it skips it and keeps going, and at the end it logs what downloaded, what was offline and what failed. This is the part I cared about most. It never deletes anything off the robot until the new backup is safe on the network.</p>
+  <pre class="code"><code># Cleanup only runs after a successful download (or already-current), so it is safe to delete.
+if ($backupFolders.Count -gt $KeepOnRobot) {
+    $toDelete = $backupFolders | Select-Object -Skip $KeepOnRobot
+    foreach ($old in $toDelete) {
+        Write-Log &quot;$RobotName - Deleting old backup from controller: $($old.Name)&quot;
+        $session.RemoveFiles(&quot;$RemoteBackupParent/$($old.Name)&quot;) | Out-Null
+    }
+}</code></pre>
+  <p class="narrow lesson"><a href="code/ABB-BackupTransfer.ps1" download>Download the full script</a> and an <a href="code/robots.example.csv" download>example robot list</a>. I swapped the real paths, robot names and logins for made-up ones.</p>
 </div>
   </details>
   <details class="job project" id="cycle-time">

@@ -1,0 +1,3 @@
+RobotName,IP,FTPUser,FTPPassword,DestFolder
+R01,192.0.2.11,backup_user,changeme,Cell_A
+R02,192.0.2.12,backup_user,changeme,Cell_A
